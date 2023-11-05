@@ -1,42 +1,96 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+section {
+  width: 100vw;
+
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  padding-bottom: 2rem;
+}
+
+header {
+  margin-top: 30px;
+  margin-bottom: 100px;
+  margin-left: 8em;
+  flex-direction: column;
+
+  width: 100vw;
+}
+
+/*title*/
+
+.title {
+  color: rgb(109, 210, 176);
+  font-size: 1.9rem;
+  display: inline;
+
+  text-shadow: 2px 2px 4px rgb(42, 41, 41);
+  font-family: "Fjalla One", sans-serif;
+  font-weight: bold;
+}
+
+.two {
+  color: #000;
+  font-size: 1.7rem;
+  display: inline;
+  margin-top: 10px;
+}
+
+p {
+  color: #3e3d3d;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.dark {
+  background: #000;
+  color: #fff;
+}
+
+/*boton de whatsapp */
+
+#btn {
+  position: fixed;
+  width: 55px;
+  height: 55px;
+  line-height: 55px;
+  bottom: 30px;
+  right: 30px;
+  background-color: rgb(125, 219, 32);
+  color: aliceblue;
+  border-radius: 50px;
   text-align: center;
+  font-size: 30px;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0, 3);
+  z-index: 100;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+#btn:hover {
+  text-decoration: none;
+  color: rgb(25, 177, 45);
+  background: #fff;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (max-width: 780px) {
+  .title {
+    font-size: 1.1rem;
+    margin: 0.5em;
   }
-  to {
-    transform: rotate(360deg);
+  .p {
+    font-size: 0.5;
+    width: 250px;
+    margin-left: 1em;
   }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  header {
+    margin: 1rem;
   }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }
