@@ -1,13 +1,15 @@
 import "./App.css";
+import { Bottom } from "./components/bottom";
 import { Product } from "./components/products";
 
 function App() {
   return (
     <>
-      <div>
+      <section>
         <h1>hola 123</h1>
         <Product />
-      </div>
+      </section>
+      <Bottom />
     </>
   );
 }

@@ -24,14 +24,35 @@ export function Product() {
     setProducts(products);
   };
 
+  //implementacion de palabras en el buscador
+  const searcher = (e) => {
+    setSearch(e.target.value);
+    console.log(e.target.value);
+  };
+
+  //filtrado de palbras
+
+  const product = !search
+    ? products
+    : products.filter((dato) =>
+        dato.title.toLowerCase().includes(search.toLowerCase())
+      );
+
   useEffect(() => {
     productList();
   }, []);
 
   return (
     <section>
+      <input
+        value={search}
+        onChange={searcher}
+        stype="text"
+        placeholder=" Buscar..."
+        className="button s"
+      ></input>
       <div className="products x">
-        {products.map((product) => (
+        {product.map((product) => (
           <div className="card-product " key={product.id}>
             <figure className="container-img">
               <img src={product.image} alt={product.title} />
