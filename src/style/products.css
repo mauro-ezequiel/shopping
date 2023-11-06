@@ -22,6 +22,7 @@
   left: 0;
   bottom: 0;
   top: 0;
+  margin-bottom: 2em;
 }
 .s {
   margin-left: 7em;
@@ -38,4 +39,27 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 4em;
+}
+.price {
+  font-weight: bold;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0.5em;
+}
+
+img {
+  height: 16em;
+}
+
+.l {
+  width: 100%;
+}
+
+.info {
+  height: 4.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

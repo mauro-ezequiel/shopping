@@ -52,20 +52,22 @@ export function Product() {
         className="button s"
       ></input>
       <div className="products x">
-        {product.map((product) => (
-          <div className="card-product " key={product.id}>
-            <figure className="container-img">
-              <img src={product.image} alt={product.title} />
-            </figure>
-            <h1 className="info-products">{product.title}</h1>
+        {product
+          .map((product) => (
+            <div className="card-product " key={product.id}>
+              <figure className="container-img">
+                <img src={product.image} alt={product.title} />
+              </figure>
+              <h1 className="info">{product.title}</h1>
 
-            <h1 className="price">
-              {"$"}
-              {product.price}
-            </h1>
-            <button className="button">añadir</button>
-          </div>
-        ))}
+              <h1 className="price ">
+                {"$"}
+                {product.price}
+              </h1>
+              <button className="button l">añadir</button>
+            </div>
+          ))
+          .slice(firtsIndex, lastIndex)}
       </div>
       <Pages
         setCurentP={setCurentP}

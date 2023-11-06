@@ -2,7 +2,7 @@ import "../style/bottom.css";
 
 export function Bottom() {
   return (
-    <div className="dark">
+    <div className="dark ">
       <h1 className="t"> Contact </h1>
       <div className="container">
         <div className="lin">
